@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@+id/row_forward2stream_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        fresco:actualImageScaleType="centerCrop"
+        />
+
+    <TextView android:id="@+id/row_forward2stream_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_blue"
+        android:layout_toLeftOf="@id/row_forward2stream_iv"
+        android:textSize="16dp"/>
+
+    <TextView android:id="@+id/row_forward2stream_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@id/row_forward2stream_iv"
+        android:layout_below="@id/row_forward2stream_tv_name"
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="16dp"/>
+</RelativeLayout>

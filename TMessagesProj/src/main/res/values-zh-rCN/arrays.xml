@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="report_reason">
+        <item>垃圾营销</item>
+        <item>淫秽色情</item>
+        <item>虚假信息</item>
+    </array>
+</resources>

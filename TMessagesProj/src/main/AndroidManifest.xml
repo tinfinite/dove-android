@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.telegram.messenger"
+    android:installLocation="auto">
+
+    <supports-screens android:anyDensity="true"
+                      android:largeScreens="true"
+                      android:normalScreens="true"
+                      android:resizeable="true"
+                      android:smallScreens="true"
+                      android:xlargeScreens="true"/>
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.PORTRAIT" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.LOCATION" android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.tinfinite.dove.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.tinfinite.dove.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
+    <permission android:name="com.tinfinite.dove.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <permission android:name="com.tinfinite.dove.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+
+    <application
+        android:name=".ApplicationLoader"
+        android:allowBackup="false"
+        android:hardwareAccelerated="@bool/useHardwareAcceleration"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/AppName"
+        tools:replace="android:label"
+        android:largeHeap="true"
+        android:theme="@style/Theme.TMessages.Start">
+
+        <provider
+            android:name="com.tinfinite.provider.T8provider"
+            android:authorities="com.tinfinite.dove"
+            android:exported="false" />
+
+        <activity
+            android:name="org.telegram.ui.LaunchActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="@bool/useHardwareAcceleration"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SHARE_QRCODE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.org.telegram.messenger.android.profile"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="telegram.me" android:scheme="http" />
+                <data android:host="telegram.me" android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:icon="@drawable/ic_launcher" android:priority="1">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="tg" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.telegram.ui.IntroActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity
+            android:name="org.telegram.ui.PopupNotificationActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/Theme.TMessages.PopupNotification"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+
+        <activity android:name="com.tinfinite.ui.WebviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
+        <receiver android:name="org.telegram.android.SmsListener">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="org.telegram.android.AuthenticatorService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/auth"/>
+        </service>
+
+        <service android:name="org.telegram.android.ContactsSyncAdapterService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_contacts" />
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE"
+                android:resource="@xml/contacts" />
+        </service>
+
+        <service android:name="org.telegram.android.NotificationsService" android:enabled="true"/>
+        <service android:name="org.telegram.android.NotificationRepeat" android:exported="false"/>
+        <service android:name="org.telegram.android.NotificationDelay" android:exported="false"/>
+        <service android:name="org.telegram.android.VideoEncodingService" android:enabled="true"/>
+
+        <receiver android:name="org.telegram.android.AppStartReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="org.telegram.start" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver
+            android:name="org.telegram.android.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.tinfinite.dove" />
+            </intent-filter>
+        </receiver>
+
+        <!-- JPUSH Receiver-->
+        <receiver android:name="com.tinfinite.jpush.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.tinfinite.dove" />
+            </intent-filter>
+        </receiver>
+
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
+
+        <receiver android:name="org.telegram.android.WearReplyReceiver" android:enabled="true"/>
+
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false" />
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="632dp" />
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="598dp" />
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="632dp" />
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="598dp" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB6zH1y5jenhVbMb2NAJMW0N2DqECfncio"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="DOVE_CHANNEL"
+            android:value="${CHANNEL_NAME}"
+            />
+    </application>
+
+</manifest>

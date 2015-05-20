@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        
+        <org.telegram.ui.Components.BackupImageView
+            android:id="@+id/row_stream_reply_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView android:id="@+id/row_stream_reply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/row_stream_reply_name"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            style="@style/tv_time"/>
+
+        <TextView android:id="@+id/row_stream_reply_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/row_stream_reply_iv"
+            android:layout_toLeftOf="@id/row_stream_reply_time"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"/>
+
+        <com.tinfinite.ui.widget.LinkTextView android:id="@+id/row_stream_reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/row_stream_reply_name"
+            android:layout_below="@id/row_stream_reply_name"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:autoLink="web"
+            android:textColorLink="@color/dark_blue"/>
+
+        </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/detail_empty"
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp">
+            <ImageView
+                android:src="@drawable/no_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/NoCommentsYet"
+                android:textColor="#B6C1CC"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_line_bg"/>
+
+</RelativeLayout>

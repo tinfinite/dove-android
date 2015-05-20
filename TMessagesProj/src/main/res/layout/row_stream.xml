@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/list_selector"
+    android:layout_height="match_parent">
+
+    <com.tinfinite.ui.views.StreamHeaderView
+        android:id="@+id/row_stream_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></com.tinfinite.ui.views.StreamHeaderView>
+
+
+    <com.tinfinite.ui.views.StreamForwardView
+        android:id="@+id/row_stream_forwardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></com.tinfinite.ui.views.StreamForwardView>
+
+    <com.tinfinite.ui.views.StreamPostView
+        android:id="@+id/row_stream_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        ></com.tinfinite.ui.views.StreamPostView>
+
+    <com.tinfinite.ui.views.StreamFooterView
+        android:id="@+id/row_stream_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.tinfinite.ui.views.StreamFooterView>
+
+</LinearLayout>

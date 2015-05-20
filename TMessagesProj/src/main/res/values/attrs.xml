@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Emojicon">
+        <attr name="emojiconSize" format="dimension" />
+        <attr name="emojiconTextStart" format="integer" />
+        <attr name="emojiconTextLength" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiSwipeRefreshLayout">
+        <attr name="foreground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="headerLayout" format="reference" />
+        <attr name="contentLayout" format="reference" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_colorRipple" format="color" />
+        <attr name="fab_shadow" format="boolean" />
+        <attr name="fab_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="absoluteMinValue" format="integer|float"/>
+        <attr name="absoluteMaxValue" format="integer|float"/>
+        <attr name="singleThumb" format="boolean"/>
+    </declare-styleable>
+
+</resources>

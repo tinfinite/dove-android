@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#F7F7F7"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:minHeight="50dp">
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:text="Recommend"
+        android:paddingTop="10dp"
+        android:gravity="bottom"
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:textSize="14sp"
+        android:textColor="#6D6D72"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

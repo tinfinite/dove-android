@@ -1,0 +1,50 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" >
+
+    <View
+        android:layout_alignParentTop="true"
+        android:background="#C8C7CC"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/vote_tab_white_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/post_tab"
+            android:clickable="true"
+            android:textColor="@color/vote_tab_text"
+            android:focusable="true"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text="Posts"
+            android:textSize="16sp"
+            android:background="@drawable/vote_tab_left_blue_bg"
+            android:layout_width="96dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/messages_tab"
+            android:gravity="center"
+            android:clickable="true"
+            android:textColor="@color/vote_tab_text"
+            android:focusable="true"
+            android:layout_margin="1dp"
+            android:text="Messages"
+            android:textSize="16sp"
+            android:background="@drawable/vote_tab_right_blue_bg"
+            android:layout_width="96dp"
+            android:layout_height="24dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

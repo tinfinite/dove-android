@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="84dp"
+    android:layout_height="84dp"
+    android:id="@+id/row_stream_image_view_iv"
+    fresco:placeholderImage="@color/white_bg"
+    android:minHeight="84dp"
+    android:minWidth="84dp"
+    android:maxHeight="84dp"
+    android:maxWidth="84dp" />

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="8dp">
+
+    <com.tinfinite.ui.widget.LinkTextView android:id="@+id/view_stream_post_tv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/tv_stream_forward_view"
+        android:paddingTop="8dp"
+        android:maxLines="8"
+        android:autoLink="web"
+        android:textColorLink="@color/dark_blue"
+        />
+
+    <com.tinfinite.ui.views.StreamImageView
+        android:id="@+id/view_stream_post_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"></com.tinfinite.ui.views.StreamImageView>
+
+    <com.tinfinite.ui.views.StreamUrlThumbView
+        android:id="@+id/view_stream_post_urlthumbview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"></com.tinfinite.ui.views.StreamUrlThumbView>
+
+</LinearLayout>

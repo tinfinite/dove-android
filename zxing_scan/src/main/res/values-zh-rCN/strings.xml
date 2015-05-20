@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">zxing</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="intentTitle">选择二维码图片</string>
+    <string name="openCameraFailure">打开摄像头失败</string>
+</resources>

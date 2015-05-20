@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.telegram.ui.ActionBar.ActionBar android:id="@+id/webview_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/dark_blue"></org.telegram.ui.ActionBar.ActionBar>
+
+    <ProgressBar android:id="@+id/webview_prograssbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    
+    <WebView android:id="@+id/webview_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+</LinearLayout>

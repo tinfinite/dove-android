@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout android:id="@+id/chatoptions_layout_vote"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView android:id="@+id/chatoptions_iv_upvote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dialog_upvote"
+                android:scaleType="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_bg"/>
+
+            <ImageView android:id="@+id/chatoptions_iv_downvote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dialog_downvote"
+                android:scaleType="center"
+                android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_bg"
+            android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/chatoptions_layout_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView android:id="@+id/chatoptions_tv_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/Forward2Stream_Title"
+            android:textColor="@color/theme_t8_font_2"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_bg"
+            android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/chatoptions_layout_btns"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView android:id="@+id/chatoptions_iv_copy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dialog_copy"
+                android:scaleType="center"
+                android:layout_weight="1"/>
+
+            <ImageView android:id="@+id/chatoptions_iv_download"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dialog_download"
+                android:visibility="gone"
+                android:scaleType="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_bg"/>
+
+            <ImageView android:id="@+id/chatoptions_iv_reply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dialog_reply"
+                android:scaleType="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_bg"/>
+
+            <ImageView android:id="@+id/chatoptions_iv_forward"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dialog_forward"
+                android:scaleType="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_bg"/>
+
+            <ImageView android:id="@+id/chatoptions_iv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_dialog_delete"
+                android:scaleType="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_bg"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

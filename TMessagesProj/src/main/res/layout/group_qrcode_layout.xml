@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true" >
+
+    <FrameLayout
+        android:layout_centerInParent="true"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:background="@drawable/qrcode_bg" >
+        <FrameLayout
+            android:id="@+id/qrcode_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="left|top"
+                android:src="@drawable/qr_dove_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/qrcode_image"
+                android:scaleType="fitXY"
+                android:layout_width="160dp"
+                android:layout_height="160dp" />
+
+            <TextView
+                android:id="@+id/chat_name"
+                android:gravity="center"
+                android:textColor="#008DF2"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_width="140dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/GroupQRCodeDescription"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textColor="#008DF2"
+                android:textSize="12sp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_width="200dp"
+                android:maxLines="2"
+                android:layout_height="wrap_content" />
+            </FrameLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
+

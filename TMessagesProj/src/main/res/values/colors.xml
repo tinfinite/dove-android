@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="divider">#dcdcdc</color>
+    <color name="dark_blue">#008DF2</color>
+
+    <color name="refresh_progress_1">@color/theme_accent_2</color>
+    <color name="refresh_progress_2">@color/theme_accent_1</color>
+    <color name="refresh_progress_3">@color/theme_primary</color>
+    <color name="theme_primary">#3f51b5</color>
+    <color name="theme_primary_dark">#303f9f</color>
+    <color name="theme_primary_light">#7986cb</color>
+
+    <color name="theme_accent_1">#00b0ff</color>
+    <color name="theme_accent_1_light">#8ad4fa</color>
+
+    <color name="theme_accent_2">#e91e63</color>
+
+    <color name="theme_t8_font_2">#9B9B9B</color>
+
+    <color name="white">#ffffff</color>
+    <color name="dark_gray">#9B9B9B</color>
+    <color name="white_bg">#E6E6E6</color>
+    <color name="divider_line_bg">#DDDDDD</color>
+    <color name="forward_bg_with_comment">#fafafa</color>
+
+    <color name="transparent">#00000000</color>
+</resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/viewstream_forward_layout_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.tinfinite.ui.widget.LinkTextView android:id="@+id/view_stream_forward_tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tv_stream_forward_view"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:autoLink="web"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line_bg" />
+
+        </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/view_stream_forward_layout_forward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/view_stream_forward_layout_content_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView android:id="@+id/view_stream_forward_tv_author_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/tv_stream_forward_view_name"
+                android:singleLine="true"
+                android:textStyle="bold"
+                />
+
+            <com.tinfinite.ui.widget.LinkTextView android:id="@+id/view_stream_forward_tv_content_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/tv_stream_forward_view"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:autoLink="web"
+                android:linksClickable="false"
+                android:textColorLink="@color/dark_blue"
+                />
+
+            </LinearLayout>
+
+        <LinearLayout android:id="@+id/view_stream_forward_layout_content_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView android:id="@+id/view_stream_forward_tv_author_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/tv_stream_forward_view_name"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                />
+
+            <com.tinfinite.ui.widget.LinkTextView android:id="@+id/view_stream_forward_tv_content_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/tv_stream_forward_view"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:autoLink="web"
+                android:linksClickable="false"
+                android:textColorLink="@color/dark_blue"
+                />
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/view_stream_forward_tv_content_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tv_stream_forward_view"
+            android:visibility="visible"
+            android:text="......"
+            />
+
+        <com.tinfinite.ui.views.StreamImageView
+            android:id="@+id/view_stream_forward_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"></com.tinfinite.ui.views.StreamImageView>
+
+        <com.tinfinite.ui.views.StreamUrlThumbView
+            android:id="@+id/view_stream_forward_urlthumbview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"></com.tinfinite.ui.views.StreamUrlThumbView>
+
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/view_stream_forward_layout_forwardby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:textSize="14dp"
+            android:text="@string/StreamForwardBy"
+            android:paddingBottom="8dp"/>
+
+        <TextView android:id="@+id/view_stream_forward_tv_forwardby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue"
+            android:textSize="14dp"
+            android:singleLine="true"
+            android:layout_marginLeft="4dp"
+            android:paddingBottom="8dp"
+            />
+
+        </LinearLayout>
+
+</LinearLayout>

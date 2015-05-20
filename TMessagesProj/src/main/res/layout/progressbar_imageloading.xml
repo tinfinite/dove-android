@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressbar_imageloading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:indeterminateBehavior="repeat"
+    android:indeterminateDuration="3500"
+    android:indeterminateOnly="false"
+    android:maxHeight="20.0dip"
+    android:minHeight="20.0dip"
+    android:orientation="vertical"
+    android:progressDrawable="@drawable/progress_horizontal" />

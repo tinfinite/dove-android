@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:minHeight="96dp"
+    android:background="@drawable/stream_url_thumbview_selector"
+    android:layout_marginLeft="-6dp"
+    android:layout_marginRight="-6dp"
+    android:layout_marginTop="-6dp"
+    android:layout_marginBottom="-6dp">
+
+    <ImageView
+        android:id="@+id/web_image"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="8dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp" />
+    <ImageView
+        android:id="@+id/web_del"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/web_image"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/web_title"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@id/web_title"
+            android:layout_marginTop="2dp"
+            android:id="@+id/web_description"
+            android:textSize="12sp"
+            android:textColor="#ffb2b2b2"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/web_uri"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:textColor="#ffb2b2b2"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

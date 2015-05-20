@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="report_reason">
+        <item>Spam</item>
+        <item>Abusive or Harmful</item>
+        <item>Inappropriate Content</item>
+    </array>
+</resources>

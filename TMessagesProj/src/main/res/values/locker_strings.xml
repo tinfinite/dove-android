@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">图案解锁</string>
+    <string name="lockscreen_access_pattern_start">"开始绘制图案"</string>
+    <string name="lockscreen_access_pattern_cleared">"图案已清除"</string>
+    <string name="lockscreen_access_pattern_cell_added">"已添加单元格"</string>
+    <string name="lockscreen_access_pattern_detected">"图案绘制完成"</string>
+    <string name="lockpattern_retry_button_text">Reset</string>
+    <string name="lockpattern_continue_button_text">Continue</string>
+    <string name="lockpattern_confirm_button_text">Confirm</string>
+    <string name="lockpattern_recording_intro_header">Create gesture password</string>
+    <string name="lockpattern_settings_help_how_to_record">"如何绘制解锁图案"</string>
+    <string name="lockpattern_recording_incorrect_too_short">Your password is not long enough, please cover at least 4 dots</string>
+    <string name="lockpattern_pattern_entered_header">图案已记录</string>
+    <string name="lockpattern_pattern_confirmed_header">"确认保存新解锁图案"</string>
+    <string name="lockpattern_need_to_confirm">Please set again to confirm</string>
+    <string name="lockpattern_need_to_unlock_wrong">Your password did not match, please set again</string>
+    <string name="lockpattern_recording_inprogress">Release to finish</string>
+    <string name="gesture_password_guide_text">Create gesture password to protect your privacy</string>
+    <string name="gesture_password_guide_creat_btn">Create gesture password</string>
+    <string name="createBtn">Create</string>
+
+</resources>

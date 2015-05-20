@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#EFEFF4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <ImageView android:id="@+id/item_discover_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/item_discover_btn"
+            android:padding="8dp"
+            android:layout_marginRight="-8dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <org.telegram.ui.Components.BackupImageView
+            android:id="@+id/item_discover_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+        <TextView android:id="@+id/item_discover_tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/item_discover_tv_language"
+            android:layout_toRightOf="@id/item_discover_iv"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+
+        <TextView android:id="@+id/item_discover_tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/item_discover_tv_name"/>
+
+        <TextView android:id="@+id/item_discover_tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/item_discover_btn"
+            android:layout_toRightOf="@id/item_discover_iv"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:textSize="14dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@id/item_discover_tv_name"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/group_join_et"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        android:background="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:hint="@string/DialogJoinGroupHint" />
+
+    <Button android:id="@+id/group_join_btn_join"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="48dp"
+        android:text="@string/GroupJoinBtnJoin"
+        android:textColor="#2f8cc9"
+        android:visibility="gone"/>
+
+    <Button android:id="@+id/group_join_btn_chat"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="48dp"
+        android:text="@string/GroupJoinBtnChat"
+        android:textColor="#2f8cc9"
+        android:visibility="gone"/>
+
+</LinearLayout>

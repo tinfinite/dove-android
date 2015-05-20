@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/stream_forword_selector">
+
+    <org.telegram.ui.Components.BackupImageView
+        android:id="@+id/view_votes_iv_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/view_votes_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/tv_time"
+                android:text="12s"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/view_votes_tv_name"/>
+
+            <TextView android:id="@+id/view_votes_tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_blue"
+                android:text="adsfasd"
+                android:textSize="16sp"
+                android:layout_toLeftOf="@id/view_votes_tv_time"
+                android:layout_marginRight="8dp"
+                />
+
+        </RelativeLayout>
+
+        <TextView android:id="@+id/view_votes_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/view_votes_iv_origin_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                fresco:placeholderImage="@color/white_bg"
+                android:visibility="gone"/>
+
+            <TextView android:id="@+id/view_votes_tv_origin_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/dark_gray"
+                android:maxLines="2"
+                android:text="fwqoeirdslfasldfoirwqelkfjasldjkfalsdfasdlkhfasdkfadfasdfasdfasdfasdfasdfadsfasd"
+                android:lineSpacingExtra="4dp"
+                android:ellipsize="end"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

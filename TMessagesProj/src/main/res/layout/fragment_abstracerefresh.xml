@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tinfinite.ui.widget.MultiSwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_above="@+id/swipe_refresh_footer_container"
+        tools:context="com.tinfinite.android.ui.fragment.AbstractUserListFragment">
+
+        <com.tinfinite.ui.widget.LoadMoreRecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+    </com.tinfinite.ui.widget.MultiSwipeRefreshLayout>
+
+    <RelativeLayout android:id="@+id/swipe_refresh_empty_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_above="@+id/swipe_refresh_footer_container">
+        <TextView
+            android:id="@+id/empty_text_view"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/swipe_refresh_footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        </FrameLayout>
+
+    <!--<ImageView-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:background="@drawable/floating_states"-->
+        <!--android:src="@drawable/floating_pencil"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_marginRight="14dp"-->
+        <!--android:layout_marginBottom="14dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/floating_button"/>-->
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/floating_pencil"
+        android:background="@drawable/floating_states"
+        android:visibility="gone"
+        fab:fab_colorNormal="#008DF2"
+        fab:fab_colorPressed="#0580D8"
+        />
+
+</RelativeLayout>

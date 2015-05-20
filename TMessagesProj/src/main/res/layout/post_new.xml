@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/photo_ll"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/photo_menu_ll"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.tinfinite.ui.views.StreamUrlThumbView
+            android:id="@+id/url_thumb_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></com.tinfinite.ui.views.StreamUrlThumbView>
+
+        <org.telegram.ui.Components.HorizontalListView
+            android:layout_width="fill_parent"
+            android:layout_height="102dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/photo_list"
+            android:clipToPadding="false" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/post_edit"
+        android:hint="@string/TypeMessage"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textCapSentences|textMultiLine"
+        android:singleLine="false"
+        android:textSize="18sp"
+        android:gravity="top|left"
+        android:padding="10dp"
+        android:background="@null"
+        android:textColor="#ff000000"
+        android:textColorHint="#ffb2b2b2"
+        android:layout_above="@id/photo_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/chat_compose_panel"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <org.telegram.ui.Components.FrameLayoutFixed
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:minHeight="48dp"
+                android:id="@+id/input_view_et"
+                android:maxLines="4"
+                android:textSize="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/stream_url_thumbview_bg"
+                android:textColorHint="#b2b2b2"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="16384"
+                android:gravity="bottom"
+                android:paddingBottom="12dp"
+                android:paddingTop="11dp"
+                android:textColor="#000000" />
+
+        </org.telegram.ui.Components.FrameLayoutFixed>
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="-6dp"
+            android:layout_gravity="bottom">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerInside"
+                android:id="@+id/chat_audio_send_button"
+                android:enabled="false"
+                android:src="@drawable/mic_button_states"
+                android:paddingRight="4dp"
+                android:visibility="gone"
+                android:background="@android:color/white" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerInside"
+                android:id="@+id/input_view_send"
+                android:enabled="false"
+                android:src="@drawable/ic_send"
+                android:background="@android:color/transparent" />
+
+        </FrameLayout>
+
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line_bg" />
+
+</LinearLayout>

@@ -1,0 +1,1 @@
+include ':TMessagesProj', ':zxing_scan', ':dialog', ':jpush'

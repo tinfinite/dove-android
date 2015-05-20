@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <org.telegram.ui.Components.BackupImageView
+            android:id="@+id/view_comments_iv_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:id="@+id/view_comments_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/tv_time"
+                    android:text="12s"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/view_comments_tv_name"/>
+
+                <TextView android:id="@+id/view_comments_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:text="adsfasd"
+                    android:textSize="16sp"
+                    android:layout_toLeftOf="@id/view_comments_tv_time"
+                    android:layout_marginRight="8dp"
+                    />
+
+            </RelativeLayout>
+
+            <com.tinfinite.ui.widget.LinkTextView android:id="@+id/view_comments_tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text="fwqoeirdslfasldfoirwqeladflasdkfjalskdfjalsdkfjalskdfjaskldjfalskdfjasdkfjasdlkfasdfasldkfasdklfjasdlkfkfjasldjkfalsdfasdlkhfasdkfadfasdfasdfasdfasdfasdfadsfasd"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:autoLink="web"
+                android:textColorLink="@color/dark_blue"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:background="#F9F9F9">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/view_comments_iv_origin_image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    fresco:placeholderImage="@color/white_bg"
+                    android:visibility="gone"/>
+
+                <com.tinfinite.ui.widget.EmojiTextView android:id="@+id/view_comments_tv_origin_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:maxLines="2"
+                    android:layout_marginTop="2dp"
+                    android:text="限制：每个 tag 命名长度限制为 40 字节，最多支持设置 100 个 tag，但总长度不得超过1K字节。（"
+                    android:lineSpacingExtra="4dp"
+                    android:ellipsize="end"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+    <TextView android:id="@+id/view_stream_footer_divider"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@drawable/greydivider"/>
+
+</LinearLayout>

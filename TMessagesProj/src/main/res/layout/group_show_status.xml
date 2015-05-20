@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#EFEFF4">
+
+    <RelativeLayout android:id="@+id/group_show_status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"></RelativeLayout>
+
+
+    <TextView android:id="@+id/group_show_status_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/GroupTypeHint"
+        android:textSize="14dp"
+        android:textColor="@android:color/darker_gray"
+        />
+
+    <EditText android:id="@+id/group_show_status_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:maxHeight="144dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:minHeight="96dp"
+        android:gravity="left"
+        android:hint="@string/GroupShowStatusEtHint"
+        android:background="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="16dp"/>
+
+    <RelativeLayout android:id="@+id/group_show_status_layout_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"></RelativeLayout>
+
+
+</LinearLayout>

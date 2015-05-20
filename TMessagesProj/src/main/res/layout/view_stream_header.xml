@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+    
+    <org.telegram.ui.Components.BackupImageView
+        android:id="@+id/view_stream_header_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="8dp"/>
+
+    <com.tinfinite.ui.widget.EmojiTextView
+        android:id="@+id/view_stream_header_tv_community"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/dark_blue"
+        android:layout_alignParentRight="true"
+        android:singleLine="true"
+        android:layout_marginTop="-16dp"
+        android:paddingTop="16dp"
+        android:layout_alignBottom="@+id/view_stream_header_tv_name"
+        android:layout_marginLeft="16dp"
+        android:text="adsfasdadsfasdfasd"
+        android:maxWidth="120dp"
+        />
+
+    <TextView android:id="@+id/view_stream_header_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/dark_blue"
+        android:layout_toRightOf="@id/view_stream_header_iv"
+        android:singleLine="true"
+        android:text="sadfasdadsfasdfasdfasdfasd"
+        android:layout_toLeftOf="@id/view_stream_header_tv_community"
+        />
+
+    <TextView android:id="@+id/view_stream_header_tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/tv_time"
+        android:layout_alignBottom="@id/view_stream_header_iv"
+        android:layout_toRightOf="@id/view_stream_header_iv"/>
+
+</RelativeLayout>

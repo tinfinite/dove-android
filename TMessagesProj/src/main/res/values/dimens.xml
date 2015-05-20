@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="swipe_refresh_progress_bar_start_margin">-40dp</dimen>
+    <dimen name="swipe_refresh_progress_bar_end_margin">16dp</dimen>
+</resources>

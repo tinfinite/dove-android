@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/discover_rl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@drawable/list_selector"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:minHeight="72dp">
+
+    <ImageView android:id="@+id/item_discover_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/item_discover_btn"
+        android:padding="8dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-8dp"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+
+    <org.telegram.ui.Components.BackupImageView
+        android:id="@+id/item_discover_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"/>
+
+    <TextView android:id="@+id/item_discover_tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_alignParentRight="true"
+    android:layout_alignBottom="@id/item_discover_tv_name"/>
+
+    <TextView android:id="@+id/item_discover_tv_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone"
+        android:layout_toLeftOf="@id/item_discover_tv_language"
+        android:layout_alignBottom="@id/item_discover_tv_name"/>
+
+    <TextView android:id="@+id/item_discover_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_discover_iv"
+        android:layout_toLeftOf="@id/item_discover_tv_points"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18dp"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="12dp" />
+
+    <TextView android:id="@+id/item_discover_tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/item_discover_btn"
+        android:layout_toRightOf="@id/item_discover_iv"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="14dp"
+        android:singleLine="true"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@id/item_discover_tv_name"/>
+
+    <View
+        android:background="#ffdcdcdc"
+        android:layout_marginLeft="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+</RelativeLayout>

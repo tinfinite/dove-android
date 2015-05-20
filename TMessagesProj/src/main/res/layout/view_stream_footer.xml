@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_post_info_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/view_stream_footer_layout_reply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/view_stream_footer_tv_reply"
+                style="@style/tv_stream_footer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/post_comment" />
+        </RelativeLayout>
+
+        <com.tinfinite.ui.widget.VoteButton
+            android:id="@+id/view_stream_footer_votebtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/view_stream_footer_layout_btns"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/view_stream_footer_tv_block"
+                style="@style/tv_stream_footer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/post_block"
+                android:visibility="gone"/>
+
+            <TextView android:id="@+id/view_stream_footer_tv_delete"
+                style="@style/tv_stream_footer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:drawableLeft="@drawable/post_delete" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line_bg" />
+
+    <TextView android:id="@+id/view_stream_footer_divider"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@drawable/greydivider"/>
+</LinearLayout>
+
+

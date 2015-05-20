@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        t8 {
+            keyAlias 't8'
+            keyPassword '2014@t8'
+            storeFile file('/Users/tinfinite.jks')
+            storePassword '2014@t8'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "21.1.1"
+    defaultConfig {
+        applicationId "com.tinfinite.dove"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 31
+        versionName "2.1.2"
+        signingConfig signingConfigs.t8
+        multiDexEnabled true
+
+        manifestPlaceholders = [ CHANNEL_NAME:"beta" ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+        xiaomi {
+            manifestPlaceholders = [ CHANNEL_NAME:"xiaomi"]
+        }
+        google {
+            manifestPlaceholders = [ CHANNEL_NAME:"google" ]
+        }
+        _360 {
+            manifestPlaceholders = [ CHANNEL_NAME:"_360" ]
+        }
+        beta {
+            manifestPlaceholders = [ CHANNEL_NAME:"beta" ]
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+dependencies {
+    compile project(':zxing_scan')
+    compile project(':dialog')
+    compile project(':jpush')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:support-v4:22.1.+'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.3'
+    compile 'com.google.android.gms:play-services-analytics:7.0.0'
+    compile 'com.google.android.gms:play-services-gcm:7.0.0'
+    compile 'com.google.android.gms:play-services-maps:7.0.0'
+    compile 'com.google.android.gms:play-services-location:7.0.0'
+    compile 'commons-io:commons-io:2.4'
+    compile 'net.hockeyapp.android:HockeySDK:3.5.+'
+    compile 'com.googlecode.mp4parser:isoparser:1.0.+'
+    compile 'com.jakewharton:disklrucache:2.0.2'
+    compile 'com.qiniu:qiniu-android-sdk:7.0.1'
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'com.melnykov:floatingactionbutton:1.2.0'
+    compile 'com.facebook.fresco:fresco:0.4.0+'
+}
+
+

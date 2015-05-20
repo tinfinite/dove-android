@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText android:id="@+id/forward2stream_et"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:paddingBottom="16dp"
+        android:hint="@string/Forward2StreamHint"
+        android:textSize="16dp"
+        android:textColorHint="@android:color/darker_gray"
+        android:gravity="left"/>
+
+    <CheckBox android:id="@+id/forward2stream_cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/forward2stream_et"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:text="@string/forward2stream_cbox"/>
+
+    <ListView android:id="@+id/forward2stream_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:listSelector="@null"
+        android:minHeight="96dp"
+        android:cacheColorHint="@null"
+        android:layout_below="@id/forward2stream_et"></ListView>
+</RelativeLayout>
